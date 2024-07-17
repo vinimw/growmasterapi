@@ -55,7 +55,7 @@ async def add_plant():
         "flower_date": data.get('flower_date', ''),
         "yield": data.get('yield', '')
     }
-
+    
     url, headers = build_request_params_post('plants')
     external_data, status = await post_external_data(url, dataSend, headers)
     
