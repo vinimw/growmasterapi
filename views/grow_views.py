@@ -88,7 +88,7 @@ async def edit_plant():
 
 @grow_bp.route('/api/grows/delete', methods=['POST'])
 @token_required
-async def edit_plant():
+async def delete_plant():
     auth_header = request.headers.get('Authorization')
     token = auth_header.split('Bearer ')[1]
 
