@@ -21,7 +21,7 @@ async def get_plants():
 
 @grow_bp.route('/api/grows', methods=['POST'])
 @token_required
-async def add_plant():
+async def add_grow():
     auth_header = request.headers.get('Authorization')
     token = auth_header.split('Bearer ')[1]
 
@@ -52,7 +52,7 @@ async def add_plant():
 
 @grow_bp.route('/api/grows/update', methods=['POST'])
 @token_required
-async def edit_plant():
+async def edit_grow():
     auth_header = request.headers.get('Authorization')
     token = auth_header.split('Bearer ')[1]
 
@@ -88,7 +88,7 @@ async def edit_plant():
 
 @grow_bp.route('/api/grows/delete', methods=['POST'])
 @token_required
-async def delete_plant():
+async def delete_grow():
     auth_header = request.headers.get('Authorization')
     token = auth_header.split('Bearer ')[1]
 
